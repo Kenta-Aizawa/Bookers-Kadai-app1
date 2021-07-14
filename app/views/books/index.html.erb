@@ -1,0 +1,48 @@
+
+<body>
+<h1>Books</h1>
+<table>
+  <thead>
+    <div class="tr">
+      <div class="title-title">Title</div>
+      <div class="body-body">Body</div>
+      <div class="three" colspan="3"></div>
+    </div>
+  </thead>
+
+  <tbody>
+    <div class="tr">
+      <% @books.each do |book| %>
+      <div class="title-title"><%= book.title %></div>
+      <div class="body-body"><%= book.body %></div>
+      <div class="three"><%= link_to "Show",book_path(book.id) %></div>
+      <div class="three"><%= link_to "Edit",edit_book_path(book.id) %></div>
+      <div class="three"><%= link_to "Delete", book_path(book.id), method: :delete, "data-confirm" =>"Are you sure ？" %></div>
+      <% end %>
+    </div>
+  </tbody>
+</table>
+
+<h2>New book</h2>
+
+<%= form_with model:@book,　local:true do |f| %>
+
+   <% if @book.errors.any? %>
+   <div class="error" >
+      <h2 class="error-message"><%=(@book.errors.count) %>prohibited this book from being saved</h2>
+      <% @book.errors.full_messages.each do |msg| %>
+         <ul class="msg">
+           <li class="msg-msg"><%= msg %></li>
+         </ul>
+      <% end %>
+   </div>
+   <% end %>
+
+   <div>Title</div>
+   <div class="field"><%= f.text_field :title %></div>
+   <div>Body</div>
+   <div class="body"><%= f.text_area :body %></div>
+   <div class="submit"><%= f.submit "Create Book" %></div>
+<% end %>
+
+</body>
