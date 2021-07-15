@@ -4,36 +4,18 @@ padding:0;
 box-sizing: border-box;
 }
 
-top-body{
-margin :50px;
-}
 
-top-p{
-display :block;
-margin-left :30px;
-margin-top :30px;
-}
+  body{
+        background-color: #fff;
+        color: #333;
+        font-family: verdana, arial, helvetica, sans-serif;
+        font-size: 13px;
+        line-height: 18px;
+        margin: 33px;
+  }
 
-body {
-    background-color: #fff;
-    color: #333;
-    font-family: verdana, arial, helvetica, sans-serif;
-    font-size: 13px;
-    line-height: 18px;
-    margin: 33px;
-}
-
-h1{
-margin-bottom: 25px;
-}
-
-  table {
-    display: table;
-    border-collapse: separate;
-    box-sizing: border-box;
-    text-indent: initial;
-    border-spacing: 2px;
-    border-color: grey;
+  h1{
+    margin-bottom: 25px;
   }
 
   .tr {
@@ -63,23 +45,6 @@ margin-bottom: 25px;
   margin-bottom:10px;
   }
 
-  p, ol, ul, td {
-    font-family: verdana, arial, helvetica, sans-serif;
-    font-size: 13px;
-    line-height: 18px;
-    margin: 33px;
-  }
-  thead{
-    display: table-header-group;
-    vertical-align: middle;
-    border-color: inherit;
-  }
-
-  tbody {
-    display: table-row-group;
-    vertical-align: middle;
-    border-color: inherit;
-  }
 
   h2 {
     display: block;
@@ -94,23 +59,25 @@ margin-bottom: 25px;
   }
 
   .error{
-  width:500px;
-  height:250px;
-  border-color:red;
-  border:solid;
+    width:500px;
+    height:150px;
+    border-color:red;
+    border:solid;
   }
 
   .error-message{
-  text-align:left;
-  height:50px;
-  background-color:red;
-  }
-
-  msg{
-  padding-top:30px;
-  padding-bottom:30px;
+    text-align:left;
+    height:20px;
+    background-color:red;
   }
 
   msg-msg{
-  text-align:center;
+    text-align:center;
+  }
+
+   p, ol, ul, td {
+    font-family: verdana, arial, helvetica, sans-serif;
+    font-size: 13px;
+    line-height: 18px;
+    margin: 33px;
   }
